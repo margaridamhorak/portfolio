@@ -5,6 +5,8 @@ body {
     font-weight: 400;
     font-style: normal;
     }
+
+
     #navbar {
     display: flex;
     justify-content: space-between;
@@ -28,6 +30,7 @@ body {
     font-weight: bold;
     font-size: 1.2em;
     }
+
 
     h1 {
         font-family: "Roboto", sans-serif;
@@ -57,6 +60,8 @@ body {
     margin-top: 20px;
     }
    
+   
+
 .image-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -76,10 +81,57 @@ width: 50vw;
     background-position: center;
 }
 
+
 .image-section .grid {
     width: 50vw;
     height: 30vw;
 }
+
+
+
+
+h2 {
+    font-family: "sirenia", sans-serif;
+    text-align: justify;
+    color: #3B5F49;
+    font-size: 70px;
+    margin-left: 550px;
+    margin-top: 0px;
+    padding-top: 30px;
+}
+
+.text {
+    line-height: 1.5;
+    font-size: 20px;
+    color: #3B5F49;
+    margin-left: 150px;
+    margin-right: 200px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+#text {
+    font-family: "Roboto", sans-serif;
+    text-indent: 0px;
+    font-size: 25px;
+    line-height: 1.2;
+    padding-left: 400px;
+    text-align: justify;
+}
+
+.image-left {
+    position: absolute;
+    left: 0px;
+    padding-left: 200px;
+    padding-top: 30px;
+    top: 160px;
+    width: 300px;
+    height: auto;
+}
+
+
+
 
 .footer-bottom {
     text-align: center;
@@ -93,13 +145,40 @@ width: 50vw;
     color: #3B5F49;
     font-size: 14px;
     font-family: "Roboto", sans-serif;
-    margin-top: 50px;
-}
-
-.footer-bottom p {
-    margin: 0;
-    color: #3B5F49;
-    font-size: 14px;
-    font-family: "Roboto", sans-serif;
     margin-top: 10px;
 }
+
+
+@keyframes breath {
+    from {
+      animation-timing-function: ease-out;
+    }
+  
+    to {
+      transform: scale(1.25) translateY(-5px) perspective(1px);
+      text-shadow: 0 0 40px var(--glow-color);
+      animation-timing-function: ease-in-out;
+    }
+  }
+  
+  @media (prefers-reduced-motion:no-preference) {
+    [letter-animation] > span {
+      display: inline-block;
+      white-space: break-spaces;
+    }
+  
+    [letter-animation=breath] {
+      --glow-color: white;
+    }
+  
+    [letter-animation=breath]>span {
+      animation: breath 1.2s ease calc(var(--index) * 100 * 1ms) infinite alternate;
+    }
+  }
+  
+  @media (prefers-reduced-motion:no-preference) and (prefers-color-scheme: light) {
+    [letter-animation=breath] {
+      --glow-color: #F5E6C6;
+    }
+  }
+          
